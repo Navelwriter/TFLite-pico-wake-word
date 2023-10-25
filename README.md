@@ -134,7 +134,7 @@ found in the Pico examples
 You can now clone this repository.
 
 ```
-git clone https://github.com/henriwoodcock/pico-wake-word.git
+git clone https://github.com/Navelwriter/TFLite-pico-wake-word
 cd pico-wake-word
 git submodule init
 git submodule update
