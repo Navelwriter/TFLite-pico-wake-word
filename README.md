@@ -1,18 +1,6 @@
 # TinyML Wake-Word Detection on Raspberry Pi Pico
 Based on repo from https://www.hackster.io/hlsw/pico-wake-word-1e2372
->Wake-Word in less than $10!
 
-
-> Update 24th May 2021
-> We now recommend the Adafruit Auto-Gain microphone instead of adjustable gain.
-> We also now include a version for a PDM microphone, this is the recommended
-> microphone to use due to higher quality.
-
-For a deep dive of the code, please check my Hackster.io
-[post](https://www.hackster.io/hlsw/pico-wake-word-1e2372).
-
-![gif of yes and no](images/yes_no_gif.gif)
-<img src="images/setup.jpeg" width="500" height="500">
 
 This application implements the wake word example from
 [Tensorflow Lite for Microcontrollers](https://www.tensorflow.org/lite/microcontrollers)
