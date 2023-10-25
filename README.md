@@ -203,7 +203,7 @@ building any other Pico application.
 1. Change directory into this repository
 
     ```
-    cd pico-wake-word
+    cd TFLite-pico-wake-word
     ```
 
 2. Initialize the submodules
