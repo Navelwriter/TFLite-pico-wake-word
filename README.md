@@ -149,6 +149,37 @@ git submodule update --init
 cd ../..
 code .
 ```
+You want to have the Cmake and Cmake tools extensions on VScode installed
+Cmake will prompt you what compiler kit to use, select GCC 10.3.1 arm-none-eabi
+In theory it will "just work" and you can build either using the bottom bar or in the cmake sidebar
+
+## Build Yourself In command line
+
+With the Pico-SDK setup on your machine, building the application is the same as
+building any other Pico application.
+Note: This is only for building using the command line, use this if vscode compiling isn't working right
+
+1. Make a build directory
+
+    ```
+    mkdir build
+    ```
+
+2. Generate the Makefiles
+
+    ```
+    cd build
+    cmake ..
+    ```
+
+3. Finally run the Makefile
+
+    ```
+    ninja -j8
+    ```
+
+Once done, your `pico_micro_speech_analog.uf2` and `pico_micro_speech_pdm.uf2`
+file is located in `build`.
 
 ## Wake-Word uf2 file
 
@@ -204,48 +235,6 @@ minicom -b 115200 -o -D {device_name}
 You should now be able to see an output similar to the following:
 
 ![Screen showing the output from the Pico](images/output_screen.png)
-
-## Build Yourself
-
-With the Pico-SDK setup on your machine, building the application is the same as
-building any other Pico application.
-
-1. Change directory into this repository
-
-    ```
-    cd TFLite-pico-wake-word
-    ```
-
-2. Initialize the submodules
-
-    ```
-    git submodule init
-    cd lib/pico-sdk
-    git submodule init
-    cd ../../
-    ```
-
-3. Make a build directory
-
-    ```
-    mkdir build
-    ```
-
-4. Generate the Makefiles
-
-    ```
-    cd build
-    cmake ..
-    ```
-
-5. Finally run the Makefile
-
-    ```
-    make -j8
-    ```
-
-Once done, your `pico_micro_speech_analog.uf2` and `pico_micro_speech_pdm.uf2`
-file is located in `build`.
 
 ## Making Changes
 
