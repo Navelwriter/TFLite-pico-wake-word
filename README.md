@@ -126,18 +126,28 @@ to one of the ADC pins on the Raspberry Pi Pico. Make the following connections:
 The final step before using this application is to set up the software stack
 (CMake and compilers). The easiest way to do this is to follow the steps on the
 Raspberry Pi Pico SDK [repository](https://github.com/raspberrypi/pico-sdk).
-Once done you can test your tolchain setup by running some of the examples
-found in the Pico examples
-[repository](https://github.com/raspberrypi/pico-examples).
 
+Setting up pico-sdk gives you three new application, select Pico -Developer Command Prompt from the windows search bar
+This puts you in C:/Program Files/Raspberry Pi/Pico SDK v1.5.1 and sets up all the environmental variables you need
+The following steps are for creating a new folder to clone the repo into.
+
+Within the Pico -Developer Command Prompt do the following:
+```
+cd C:/
+mkdir pico  //or whatever you want the folder to be
+cd pico
+```
 
 You can now clone this repository.
-
+Make sure to update all of the submodules
 ```
 git clone https://github.com/Navelwriter/TFLite-pico-wake-word
 cd pico-wake-word
-git submodule init
-git submodule update
+git submodule update --init
+cd libs/pico-sdk
+git submodule update --init
+cd ../..
+code .
 ```
 
 ## Wake-Word uf2 file
