@@ -127,8 +127,8 @@ The final step before using this application is to set up the software stack
 (CMake and compilers). The easiest way to do this is to follow the steps on the
 Raspberry Pi Pico SDK [repository](https://github.com/raspberrypi/pico-sdk).
 
-Setting up pico-sdk gives you three new application, select Pico -Developer Command Prompt from the windows search bar
-This puts you in C:/Program Files/Raspberry Pi/Pico SDK v1.5.1 and sets up all the environmental variables you need
+Setting up pico-sdk gives you three new application, select Pico -Developer Command Prompt from the windows search bar.
+This puts you in C:/Program Files/Raspberry Pi/Pico SDK v1.5.1 and sets up all the environmental variables you need.
 The following steps are for creating a new folder to clone the repo into.
 
 Within the Pico -Developer Command Prompt do the following:
@@ -142,7 +142,7 @@ You can now clone this repository.
 Make sure to update all of the submodules
 ```
 git clone https://github.com/Navelwriter/TFLite-pico-wake-word
-cd pico-wake-word
+cd TFLite-pico-wake-word
 git submodule update --init
 cd libs/pico-sdk
 git submodule update --init
